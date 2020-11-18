@@ -1,0 +1,27 @@
+.profile__button{
+  display: block;
+  width: 22px;
+  height: 22px;
+  padding: 14px 64px;
+  border: 1px solid #fff;
+  transition: opacity .3s;
+  opacity: 1;
+}
+
+.profile__button:hover{
+  opacity: .6;
+}
+
+@media (max-width: 740px){
+  .profile__button{
+    margin-top: 36px;
+  }
+}
+
+@media (max-width: 480px){
+  .profile__button{
+    width: 100%;
+    padding: 17px 0;
+    margin-top: 36px;
+  }
+}

@@ -1,0 +1,19 @@
+.profile__edit{
+  display: block;
+  padding: 6px;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  margin-left: 18px;
+  transition: opacity .3s;
+  opacity: 1;
+}
+
+.profile__edit:hover{
+  opacity: .6;
+}
+
+@media (max-width: 480px){
+  .profile__edit{
+    margin-left: 10px;
+  }
+}
