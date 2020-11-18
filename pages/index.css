@@ -25,6 +25,10 @@
 
 /* Elements */
 @import "../blocks/elements/elements.css";
-@import "../blocks/elements/__image/element__image.css";
-@import "../blocks/elements/__block/element__block.css";
-@import "../blocks/elements/__title/element__title.css";
+@import "../blocks/element/__image/element__image.css";
+@import "../blocks/element/__block/element__block.css";
+@import "../blocks/element/__title/element__title.css";
+
+/* Footer */
+@import "../blocks/footer/footer.css";
+@import "../blocks/footer/__text/footer__text.css";
