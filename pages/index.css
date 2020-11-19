@@ -32,3 +32,6 @@
 /* Footer */
 @import "../blocks/footer/footer.css";
 @import "../blocks/footer/__text/footer__text.css";
+
+/* Popup */
+@import "../blocks/popup/popup.css";
