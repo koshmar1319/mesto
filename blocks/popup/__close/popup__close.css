@@ -1,0 +1,16 @@
+.popup__close{
+  color: #fff;
+  position: absolute;
+  top: -38px;
+  right: -30px;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+@media (max-width: 570px){
+  .popup__close{
+    top: -45px;
+    right: 0;
+    font-size: 36px;
+  }
+}

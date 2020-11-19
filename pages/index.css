@@ -35,3 +35,9 @@
 
 /* Popup */
 @import "../blocks/popup/popup.css";
+@import "../blocks/popup/__container/popup__container.css";
+@import "../blocks/popup/__close/popup__close.css";
+@import "../blocks/popup/__title/popup__title.css";
+@import "../blocks/popup/__form/popup__form.css";
+@import "../blocks/popup/__input/popup__input.css";
+@import "../blocks/popup/__btn/popup__btn.css";
