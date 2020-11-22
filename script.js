@@ -20,17 +20,17 @@ function profileClickClose(){
 let forms = [...document.querySelectorAll('.popup__form')];
 
 forms.forEach((popupForm) => {
-  popupForm.addEventListener('submit', handleFormSubmit),
-  popupForm.addEventListener('submit', andleFormSubmit)
+  popupForm.addEventListener('submit', titleFormSubmit),
+  popupForm.addEventListener('submit', subtitleFormSubmit)
 })
 
-function handleFormSubmit(event){
+function titleFormSubmit(event){
   event.preventDefault();
   let nameInput = event.currentTarget.querySelector('.popup__input_name');
   profileTitle.textContent = nameInput.value;
 }
 
-function andleFormSubmit(event){
+function subtitleFormSubmit(event){
   event.preventDefault();
   let jobInput = event.currentTarget.querySelector('.popup__input_job');
   profileSubTitle.textContent = jobInput.value;
