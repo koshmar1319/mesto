@@ -41,3 +41,4 @@
 @import "../blocks/popup/__form/popup__form.css";
 @import "../blocks/popup/__input/popup__input.css";
 @import "../blocks/popup/__btn/popup__btn.css";
+@import "../blocks/popup/_opened/popup_opened.css";
