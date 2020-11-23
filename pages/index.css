@@ -8,7 +8,6 @@
 @import "../blocks/header/header.css";
 @import "../blocks/header/__logo/header__logo.css";
 @import "../blocks/header/__image/header__image.css";
-@import "../blocks/header/__line/header__line.css";
 
 /* Profile */
 @import "../blocks/profile/profile.css";
@@ -25,9 +24,11 @@
 
 /* Elements */
 @import "../blocks/elements/elements.css";
+@import "../blocks/element/element.css";
 @import "../blocks/element/__image/element__image.css";
 @import "../blocks/element/__block/element__block.css";
 @import "../blocks/element/__title/element__title.css";
+@import "../blocks/element/__link/element__link.css";
 
 /* Footer */
 @import "../blocks/footer/footer.css";

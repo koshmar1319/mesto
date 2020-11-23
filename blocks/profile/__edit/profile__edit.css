@@ -1,4 +1,5 @@
 .profile__edit{
+  background-color: transparent;
   display: block;
   padding: 6px;
   box-sizing: border-box;
@@ -6,6 +7,7 @@
   margin-left: 18px;
   transition: opacity .3s;
   opacity: 1;
+  cursor: pointer;
 }
 
 .profile__edit:hover{
@@ -15,5 +17,6 @@
 @media (max-width: 480px){
   .profile__edit{
     margin-left: 10px;
+    padding: 4px;
   }
 }

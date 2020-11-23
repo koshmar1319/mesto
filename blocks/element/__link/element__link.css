@@ -1,0 +1,11 @@
+.element__link{
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity .3s;
+  opacity: 1;
+}
+
+.element__link:hover{
+  opacity: .6;
+}
