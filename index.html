@@ -51,7 +51,7 @@
 
         <ul class="elements__list">
 
-          <li class="element">
+          <!-- <li class="element">
 
             <img src="images/grid-karachaevsk.png" alt="Изображение старой церкви" class="element__image">
 
@@ -133,7 +133,7 @@
               </button>
             </div>
 
-          </li>
+          </li> -->
 
         </ul>
 
@@ -164,6 +164,30 @@
             required>
 
           <button class="popup__btn" type="submit">Сохранить</button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+
+    <div class="popup">
+
+      <div class="popup__container">
+
+        <button class="popup__close" type="button">&times;</button>
+
+        <h2 class="popup__title">Новое место</h2>
+
+        <form class="popup__form" name="popup-form">
+
+          <input class="popup__input popup__input_type_name" type="text" value="" name="popup-name" placeholder="Название"
+            required>
+
+          <input class="popup__input popup__input_type_job" type="text" value="" name="popup-job" placeholder="Ссылка на картинку" required>
+
+          <button class="popup__btn" type="submit">Создать</button>
 
         </form>
 
