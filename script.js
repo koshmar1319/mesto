@@ -79,8 +79,13 @@ const listContainerElement = document.querySelector('.elements__list');
 function renderList() {
   let newHTML = '';
 
-  newHTML = initialCards.map(function(item) {
-    return `<li class="element">
+  newHTML = initialCards.map(composeItemHTML).join('');
+  
+  listContainerElement.insertAdjacentHTML('afterbegin', newHTML);
+}
+
+function composeItemHTML(item){
+  return `<li class="element">
               <img src="images/grid-karachaevsk.png" alt="Изображение старой церкви" class="element__image">
               <div class="element__block">
                 <h2 class="element__title">${item.name}</h2>
@@ -89,9 +94,6 @@ function renderList() {
                 </button>
               </div>
             </li>`
-  }).join('');
-  
-  listContainerElement.insertAdjacentHTML('afterbegin', newHTML);
 }
 
 renderList();
