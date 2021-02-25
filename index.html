@@ -31,7 +31,7 @@
 
             <div class="profile__author">
               <h1 class="profile__title">Жак-Ив Кусто</h1>
-              <button class="profile__edit" type="button">
+              <button class="profile__button profile__button_edit" type="button">
                 <img src="images/edit.png" alt="Изображение карандаш" class="profile__pencil">
               </button>
             </div>
@@ -41,7 +41,7 @@
 
         </div>
 
-        <button class="profile__button" type="button">
+        <button class="profile__button profile__button_plus" type="button">
           <img src="images/plus.png" alt="Изображение плюс" class="profile__plus">
         </button>
 
@@ -63,11 +63,17 @@
       <div class="popup__container">
         <button class="popup__close popup__close_type_edit-profile" type="button">&times;</button>
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="popup__form popup__form_profile" name="popup-form">
-          <input class="popup__input popup__input_type_name" type="text" value="Жак-Ив Кусто" name="popup-name"
-            required>
-          <input class="popup__input popup__input_type_job" type="text" value="Исследователь океана" name="popup-job"
-            required>
+        <form class="popup__form popup__form_profile" name="popup-form" novalidate>
+          <div class="popup__area">
+            <input class="popup__input popup__input_type_name" type="text" value="Жак-Ив Кусто" name="popupName"
+              placeholder="Имя" minlength="2" maxlength="40" id="popup-name" required>
+            <span class="popup__input-error" id="popup-name-error"></span>
+          </div>
+          <div class="popup__area">
+            <input class="popup__input popup__input_type_job" type="text" value="Исследователь океана" name="popupJob"
+              placeholder="О себе" minlength="2" maxlength="200" id="popup-job" required>
+            <span class="popup__input-error" id="popup-job-error"></span>
+          </div>
           <button class="popup__btn" type="submit">Сохранить</button>
         </form>
       </div>
@@ -77,11 +83,17 @@
       <div class="popup__container">
         <button class="popup__close popup__close_type_new-place" type="button">&times;</button>
         <h2 class="popup__title">Новое место</h2>
-        <form class="popup__form popup__form_places" name="popup-form">
-          <input class="popup__input popup__input_type_place" type="text" value="" name="popup-place"
-            placeholder="Название" required>
-          <input class="popup__input popup__input_type_link" type="text" value="" name="popup-link"
-            placeholder="Ссылка на картинку" required>
+        <form class="popup__form popup__form_places" name="popup-form" novalidate>
+          <div class="popup__area">
+            <input class="popup__input popup__input_type_place" type="text" value="" name="popupPlace"
+              placeholder="Название" minlength="2" maxlength="30" id="popup-place" required>
+            <span class="popup__input-error" id="popup-place-error"></span>
+          </div>
+          <div class="popup__area">
+            <input class="popup__input popup__input_type_link" type="url" value="" name="popupLink"
+              placeholder="Ссылка на картинку" id="popup-link" required>
+            <span class="popup__input-error" id="popup-link-error"></span>
+          </div>
           <button class="popup__btn popup__btn_create" type="submit">Создать</button>
         </form>
       </div>
@@ -115,6 +127,7 @@
 
   <script src="scripts/initial-сards.js"></script>
   <script src="scripts/index.js"></script>
+  <script src="scripts/validate.js"></script>
 
 </body>
 

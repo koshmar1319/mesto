@@ -1,4 +1,4 @@
-.profile__edit{
+.profile__button_edit{
   background-color: transparent;
   display: block;
   padding: 6px;
@@ -10,12 +10,12 @@
   cursor: pointer;
 }
 
-.profile__edit:hover{
+.profile__button_edit:hover{
   opacity: .6;
 }
 
 @media (max-width: 480px){
-  .profile__edit{
+  .profile__button_edit{
     margin-left: 10px;
     padding: 4px;
   }

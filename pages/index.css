@@ -16,10 +16,10 @@
 @import "../blocks/profile/__info/profile__info.css";
 @import "../blocks/profile/__author/profile__author.css";
 @import "../blocks/profile/__title/profile__title.css";
-@import "../blocks/profile/__edit/profile__edit.css";
+@import "../blocks/profile/__button/_edit/profile__button_edit.css";
 @import "../blocks/profile/__pencil/profile__pencil.css";
 @import "../blocks/profile/__subtitle/profile__subtitle.css";
-@import "../blocks/profile/__button/profile__button.css";
+@import "../blocks/profile/__button/_plus/profile__button_plus.css";
 @import "../blocks/profile/__plus/profile__plus.css";
 
 /* Elements */
@@ -43,8 +43,12 @@
 @import "../blocks/popup/__close/popup__close.css";
 @import "../blocks/popup/__title/popup__title.css";
 @import "../blocks/popup/__form/popup__form.css";
+@import "../blocks/popup/__area/popup__area.css";
 @import "../blocks/popup/__input/popup__input.css";
+@import "../blocks/popup/__input-error/popup__input-error.css";
+@import "../blocks/popup/__input-error/_active/popup__input-error_active.css";
 @import "../blocks/popup/__btn/popup__btn.css";
+@import "../blocks/popup/__btn/_inactive/popup__btn_inactive.css";
 @import "../blocks/popup/_opened/popup_opened.css";
 @import "../blocks/popup/_places/popup_places.css";
 
