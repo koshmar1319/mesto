@@ -61,20 +61,16 @@ export class FormValidator{
         this._toggleButtonState(buttonItem);
       });
     });
-
-    this._form.addEventListener('reset', () => {
-      this.resetErrors();
-    });
   }
 
   resetErrors(){
-    const errorList = Array.from(this._form.querySelectorAll(this._input));
+    const errorList = Array.from(this._form.querySelectorAll(this._inputErrorText));
     errorList.forEach((errorItem) => {
-      errorItem.classList.remove(this._inputErrorText);
+      errorItem.classList.remove(this._errorText);
     });
     const errorTextList = Array.from(this._form.querySelectorAll(this._errorText));
     errorTextList.forEach((errorTextItem) => {
-      errorTextItem.classList.remove(this._inputErrorText);
+      errorTextItem.classList.remove(this._activeErrorText);
       errorTextItem.textContent = "";
     });
   }

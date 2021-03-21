@@ -3,8 +3,6 @@ import {initialCards, validItems} from './initialCards.js';
 import {FormValidator} from './FormValidator.js';
 
 
-const container = document.querySelector('.container');
-
 const profileEdit = document.querySelector('.profile__button_edit');
 const popupProfile = document.querySelector('.popup_profile');
 const popupPlace = document.querySelector('.popup_places');
@@ -33,8 +31,10 @@ const listContainerElement = document.querySelector('.elements__list');
 const formProfile = document.querySelector('.popup__form_profile');
 const formPlace = document.querySelector('.popup__form_places');
 
-const popupForms = Array.from(document.querySelectorAll('.popup__form'));
+const popups = document.querySelectorAll('.popup');
 
+const validFormProfile = new FormValidator(validItems, formProfile);
+const validFormPlace = new FormValidator(validItems, formPlace);
 
 function openPopup(popup){
   popup.classList.add('popup_opened');
@@ -48,13 +48,13 @@ function closePopup() {
 }
 
 function openProfilePopup(){
-  formProfile.reset();
   nameInput.value = profileTitle.textContent;
   jobInput.value = profileSubTitle.textContent;
   openPopup(popupProfile);
+  validFormProfile.resetErrors();
 }
 
-function handleProfilePopup(evt){
+function handleProfilePopup(){
   profileTitle.textContent = nameInput.value;
   profileSubTitle.textContent = jobInput.value;
   closePopup(popupProfile);
@@ -62,10 +62,11 @@ function handleProfilePopup(evt){
 
 function openPlacePopup(){
   formPlace.reset();
+  validFormPlace.resetErrors();
   openPopup(popupPlace);
 }
 
-function handlePlacePopup(evt){
+function handlePlacePopup(){
   addNewItem();
   closePopup(popupPlace);
 }
@@ -93,10 +94,12 @@ function handleButtonEsc(evt){
   }
 }
 
-container.addEventListener('click', (evt) => {
-  if(evt.target.classList.contains('popup') || evt.target.classList.contains('popup__close')){
-    closePopup();
-  }
+popups.forEach((popup) => {
+  popup.addEventListener('click', (evt) => {
+    if(evt.target.classList.contains('popup') || evt.target.classList.contains('popup__close')){
+      closePopup();
+    }
+  })
 });
 
 popupCloseProfile.addEventListener('click', closePopup);
@@ -109,10 +112,9 @@ formProfile.addEventListener('submit', handleProfilePopup);
 addButtonElement.addEventListener('click', openPlacePopup);
 formPlace.addEventListener('submit', handlePlacePopup);
 
-popupForms.forEach((popupForm) => {
-  const validator = new FormValidator(validItems, popupForm);
-  validator.enableValidation();
-});
+
+validFormProfile.enableValidation();
+validFormPlace.enableValidation();
 
 renderList(initialCards);
 
