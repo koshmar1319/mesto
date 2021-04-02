@@ -51,7 +51,6 @@
 @import "../blocks/popup/__btn/_inactive/popup__btn_inactive.css";
 @import "../blocks/popup/_opened/popup_opened.css";
 @import "../blocks/popup/_places/popup_places.css";
-
 @import "../blocks/popup-image/__block/popup-image__block.css";
 @import "../blocks/popup-image/__descr/popup-image__descr.css";
 @import "../blocks/popup-image/__photo/popup-image__photo.css";

@@ -1,11 +1,12 @@
-import {popupZoomImage, popupImageDescription, popupImage, openPopup} from './index.js';
+import {popupImage} from '../index.js';
 
 export class Card {
-  constructor(data, cardSelector){
+  constructor(data, cardSelector, handleCardClick){
     this._data = data;
     this._link = data.link;
     this._name = data.name;
     this._cardSelector = cardSelector;
+    this._handleCardClick = handleCardClick;
   }
 
   _getTemplate(){
@@ -37,7 +38,7 @@ export class Card {
 
     this._imageElement = this._element.querySelector('.element__image');
     this._imageElement.addEventListener('click', () => {
-      this._openZoomImage(this._imageElement);
+      this._handleCardClick(this._imageElement, popupImage);
     });
   }
 
@@ -47,12 +48,5 @@ export class Card {
 
   _handleDeleteCard(){
     this._likeButton.closest('.element').remove();
-  }
-
-  _openZoomImage = (item) => {
-    openPopup(popupImage);
-    popupZoomImage.src = item.src;
-    popupZoomImage.alt = item.alt;
-    popupImageDescription.textContent = item.alt;
   }
 }
