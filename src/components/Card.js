@@ -1,5 +1,3 @@
-import {popupImage} from '../index.js';
-
 export class Card {
   constructor(data, cardSelector, handleCardClick){
     this._data = data;
@@ -38,7 +36,7 @@ export class Card {
 
     this._imageElement = this._element.querySelector('.element__image');
     this._imageElement.addEventListener('click', () => {
-      this._handleCardClick(this._imageElement, popupImage);
+      this._handleCardClick(this._name, this._link);
     });
   }
 

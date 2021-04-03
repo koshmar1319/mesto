@@ -51,31 +51,18 @@ export class FormValidator{
     this._inputList.forEach((inputElement) => {
       inputElement.addEventListener('input', () => {
         this._checkInputValidity(inputElement);
-        this._toggleButtonState(inputElement);
-      });
-    });
-  
-    const buttonList = Array.from(document.querySelectorAll(this._profileBtn));
-    buttonList.forEach((buttonItem) => {
-      buttonItem.addEventListener('click', () => {
-        this._toggleButtonState(buttonItem);
+        this.toggleButtonState(this._buttonElement);
       });
     });
   }
 
   resetErrors(){
-    const errorList = Array.from(this._form.querySelectorAll(this._inputErrorText));
-    errorList.forEach((errorItem) => {
-      errorItem.classList.remove(this._errorText);
-    });
-    const errorTextList = Array.from(this._form.querySelectorAll(this._errorText));
-    errorTextList.forEach((errorTextItem) => {
-      errorTextItem.classList.remove(this._activeErrorText);
-      errorTextItem.textContent = "";
+    this._inputList.forEach((inputElement) => {
+      this._hideInputError(inputElement);
     });
   }
 
-  _toggleButtonState(){
+  toggleButtonState(){
     const notValidElement = this._inputList.some((inputElement) => !inputElement.validity.valid);
     if(notValidElement){
       this._buttonElement.setAttribute('disabled', true);
