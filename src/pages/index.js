@@ -52,13 +52,12 @@ function openPlacePopup(){
 
 function addNewItem(data){
   const newItemHTML = { link: data.popupLink, name: data.popupPlace};
-  createCard(newItemHTML);
+  renderList.addItem(createCard(newItemHTML));
 }
 
 const createCard = (item) => {
   const card = new Card(item, '.template', handleCardClick);
   const cardElement = card.generateCard();
-  renderList.addItem(cardElement);
   return cardElement;
 };
 
@@ -70,9 +69,9 @@ const renderList = new Section({
 
 function handleCardClick(name, link){
   zoomImagePopup.open({name, link});
-  zoomImagePopup.setEventListeners();
 }
 
+zoomImagePopup.setEventListeners();
 
 profileEdit.addEventListener('click', openProfilePopup);
 addButtonElement.addEventListener('click', openPlacePopup);
