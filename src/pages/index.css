@@ -13,6 +13,7 @@
 @import "../blocks/profile/profile.css";
 @import "../blocks/profile/__block/profile__block.css";
 @import "../blocks/profile/__avatar/profile__avatar.css";
+@import "../blocks/profile/__avatar/_edit/profile__avatar_edit.css";
 @import "../blocks/profile/__info/profile__info.css";
 @import "../blocks/profile/__author/profile__author.css";
 @import "../blocks/profile/__title/profile__title.css";
@@ -26,11 +27,14 @@
 @import "../blocks/elements/elements.css";
 @import "../blocks/element/element.css";
 @import "../blocks/element/__delete/element__delete.css";
+@import "../blocks/element/__delete/_inactive/element__delete_inactive.css";
 @import "../blocks/elements/__list/elements__list.css";
 @import "../blocks/element/__image/element__image.css";
 @import "../blocks/element/__block/element__block.css";
 @import "../blocks/element/__title/element__title.css";
+@import "../blocks/element/__box/element__box.css";
 @import "../blocks/element/__link/element__link.css";
+@import "../blocks/element/__count/element__count.css";
 @import "../blocks/element/__link/_active/element__link_active.css";
 
 /* Footer */
@@ -54,3 +58,12 @@
 @import "../blocks/popup-image/__block/popup-image__block.css";
 @import "../blocks/popup-image/__descr/popup-image__descr.css";
 @import "../blocks/popup-image/__photo/popup-image__photo.css";
+
+@import "../blocks/popup-sure/__container/popup-sure__container.css";
+@import "../blocks/popup-sure/__title/popup-sure__title.css";
+@import "../blocks/popup/__btn/_yes/popup__btn_yes.css";
+@import "../blocks/popup-upd/__container/popup-upd__container.css";
+@import "../blocks/popup-upd/__form/popup-upd__form.css";
+@import "../blocks/popup-upd/__title/popup-upd__title.css";
+@import "../blocks/popup-upd/__input/popup-upd__input.css";
+@import "../blocks/popup-upd/__btn/popup-upd__btn.css";

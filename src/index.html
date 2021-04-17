@@ -20,7 +20,10 @@
 
       <section class="profile">
         <div class="profile__block">
-          <img src="<%=require('./images/profile-image.jpg')%>" alt="Изображение Жак-Ив Кусто" class="profile__avatar">
+          <button class="profile__button profile__avatar_edit" type="button">
+            <img src="<%=require('./images/profile-image.jpg')%>" alt="Изображение Жак-Ив Кусто"
+              class="profile__avatar">
+          </button>
           <div class="profile__info">
             <div class="profile__author">
               <h1 class="profile__title">Жак-Ив Кусто</h1>
@@ -52,16 +55,16 @@
         <h2 class="popup__title">Редактировать профиль</h2>
         <form class="popup__form popup__form_profile" name="popup-form" novalidate>
           <div class="popup__area">
-            <input class="popup__input popup__input_type_name" type="text" value="Жак-Ив Кусто" name="popupName"
+            <input class="popup__input popup__input_type_name" type="text" value="Жак-Ив Кусто" name="name"
               placeholder="Имя" minlength="2" maxlength="40" id="popup-name" required>
             <span class="popup__input-error" id="popup-name-error"></span>
           </div>
           <div class="popup__area">
-            <input class="popup__input popup__input_type_job" type="text" value="Исследователь океана" name="popupJob"
+            <input class="popup__input popup__input_type_job" type="text" value="Исследователь океана" name="about"
               placeholder="О себе" minlength="2" maxlength="200" id="popup-job" required>
             <span class="popup__input-error" id="popup-job-error"></span>
           </div>
-          <button class="popup__btn" type="submit">Сохранить</button>
+          <button class="popup__btn" type="submit" value="Сохранить">Сохранить</button>
         </form>
       </div>
     </div>
@@ -81,7 +84,7 @@
               placeholder="Ссылка на картинку" id="popup-link" required>
             <span class="popup__input-error" id="popup-link-error"></span>
           </div>
-          <button class="popup__btn popup__btn_create" type="submit">Создать</button>
+          <button class="popup__btn popup__btn_create" type="submit" value="Создать">Создать</button>
         </form>
       </div>
     </div>
@@ -89,12 +92,15 @@
     <template class="template">
       <div class="element">
         <img src="#" alt="#" class="element__image">
-        <button class="element__delete" type="button"></button>
+        <button class="element__delete element__delete_inactive" type="button"></button>
         <div class="element__block">
           <h2 class="element__title"></h2>
-          <button class="element__link" type="button">
-            <img src="<%=require('./images/like.svg')%>" alt="Изображение сердца" class="element__icon">
-          </button>
+          <div class="element__box">
+            <button class="element__link" type="button">
+              <img src="<%=require('./images/like.svg')%>" alt="Изображение сердца" class="element__icon">
+            </button>
+            <div class="element__count">0</div>
+          </div>
         </div>
       </div>
     </template>
@@ -104,6 +110,31 @@
         <button class="popup__close popup__close_type_zoom-image" type="button">&times;</button>
         <img src="#" alt="#" class="popup-image__photo">
         <h2 class="popup-image__descr"></h2>
+      </div>
+    </div>
+
+    <div class="popup-upd popup">
+      <div class="popup__container popup-upd__container">
+        <button class="popup__close popup__close_type_upd" type="button">&times;</button>
+        <h2 class="popup__title popup-upd__title">Обновить аватар</h2>
+        <form class="popup__form popup-upd__form" novalidate>
+          <div class="popup__area">
+            <input class="popup-upd__input popup__input" type="url" name="popupAvatar" id="popup-upd"
+              placeholder="Ссылка на аватар" required novalidate>
+            <span class="popup__input-error popup-upd__input-error" id="popup-upd-error"></span>
+          </div>
+          <button class="popup__btn popup-upd__btn" type="submit" value="Сохранить">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup-sure popup">
+      <div class="popup__container popup-sure__container">
+        <button class="popup__close popup__close_type_sure" type="button">&times;</button>
+        <form class="popup__form popup-sure__form" novalidate>
+          <h2 class="popup__title popup-sure__title">Вы уверены?</h2>
+          <button class="popup__btn popup__btn_yes" type="submit">Да</button>
+        </form>
       </div>
     </div>
 

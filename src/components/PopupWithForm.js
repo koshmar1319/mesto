@@ -5,6 +5,8 @@ export default class PopupWithForm extends Popup{
     super(popupSelector);
     this._handlePopupForm = handlePopupForm;
     this._formElement = this._popup.querySelector('.popup__form');
+    this._buttonText = this._formElement.querySelector('.popup__btn');
+    this._buttonTextDefault = this._formElement.querySelector('.popup__btn').value;
   }
 
   _getInputValues(){
@@ -12,6 +14,12 @@ export default class PopupWithForm extends Popup{
     this._formValues = {};
     this._inputList.forEach(input => (this._formValues[input.name] = input.value));
     return this._formValues;
+  }
+
+  openPopupDeleteCard(card, idCard){
+    super.open();
+    this._card = card;
+    this._idCard = idCard;
   }
 
   close(){
@@ -24,7 +32,23 @@ export default class PopupWithForm extends Popup{
     this._popup.addEventListener('submit', (evt) => {
       evt.preventDefault();
       this._handlePopupForm(this._getInputValues());
-      this.close();
     });
+  }
+
+  setEventListenersDelete(){
+    super.setEventListeners();
+    this._popup.addEventListener('submit', (evt) => {
+      evt.preventDefault();
+      this._handlePopupForm(this._idCard, this._card);
+    });
+  }
+
+  renderLoadText(isLoading, loadText){
+    if(isLoading){
+      this._buttonText.textContent = loadText;
+    } else {
+      this._buttonText.textContent = this._buttonTextDefault;
+      this.close();
+    }
   }
 }
