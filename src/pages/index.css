@@ -13,7 +13,8 @@
 @import "../blocks/profile/profile.css";
 @import "../blocks/profile/__block/profile__block.css";
 @import "../blocks/profile/__avatar/profile__avatar.css";
-@import "../blocks/profile/__avatar/_edit/profile__avatar_edit.css";
+@import "../blocks/profile/__button/_avatar/profile__button_avatar.css";
+
 @import "../blocks/profile/__info/profile__info.css";
 @import "../blocks/profile/__author/profile__author.css";
 @import "../blocks/profile/__title/profile__title.css";

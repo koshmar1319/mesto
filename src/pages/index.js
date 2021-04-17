@@ -13,7 +13,7 @@ import {validItems} from '../utils/validConfig.js';
 const profileEdit = document.querySelector('.profile__button_edit');
 const addButtonElement = document.querySelector('.profile__button_plus');
 
-const avatarEdit = document.querySelector('.profile__avatar_edit');
+const avatarEdit = document.querySelector('.profile__button_avatar');
 
 const nameInput = document.querySelector('.popup__input_type_name');
 const jobInput = document.querySelector('.popup__input_type_job');
