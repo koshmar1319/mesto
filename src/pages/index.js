@@ -38,15 +38,13 @@ const userAbout = new UserInfo({
   avatar: '.profile__avatar'
 });
 
-api.getUserInfo().then((userData) => {
+Promise.all([
+  api.getUserInfo(),
+  api.getInitialCards()
+]).then(([userData, cards]) => {
   userAbout.setUserAbout(userData);
   userAbout.setAvatar(userData);
   userAbout.getOwnerId(userData);
-}).catch((err) => {
-  console.log(err);
-});
-
-api.getInitialCards().then((cards) => {
   renderList.renderer(cards);
 }).catch((err) => {
   console.log(err);
@@ -136,9 +134,11 @@ const updatePopup = new PopupWithForm({handlePopupForm: (data) => {
 updatePopup.setEventListeners();
 
 const popupDeleteCard = new PopupWithForm({handlePopupForm: (idCard, cardElement) => {
+  popupDeleteCard.renderLoadText(true, `Удаление...`);
   api.deleteCard(idCard).then(() => {
     cardElement.remove();
     popupDeleteCard.close();
+    popupDeleteCard.renderLoadText(false, `Удаление...`);
   }).catch((err) => {
     console.log(err);
   })

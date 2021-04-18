@@ -19,9 +19,6 @@ export default class Api{
       }
     })
     .then(showErrorMessage)
-    .catch((err) => {
-      console.log(err);
-    })
   }
 
   sendUserInfo(data){
@@ -37,9 +34,6 @@ export default class Api{
       })
     })
     .then(showErrorMessage)
-    .catch((err) => {
-      console.log(err);
-    })
   }
 
   getInitialCards(){
@@ -50,9 +44,6 @@ export default class Api{
       }
     })
     .then(showErrorMessage)
-    .catch((err) => {
-      console.log(err);
-    })
   }
 
   addCard(cardData){
@@ -68,9 +59,6 @@ export default class Api{
       })
     })
     .then(showErrorMessage)
-    .catch((err) => {
-      console.log(err);
-    })
   }
 
   deleteCard(idCard){
@@ -81,9 +69,6 @@ export default class Api{
       }
     })
     .then(showErrorMessage)
-    .catch((err) => {
-      console.log(err);
-    })
   }
 
   addLike(idCard, handleLikeCard){
@@ -98,9 +83,6 @@ export default class Api{
       handleLikeCard(res)
       return res
     })
-    .catch((err) => {
-      console.log(err);
-    });
   }
 
   deleteLike(idCard, handleDisLikeCard){
@@ -113,9 +95,6 @@ export default class Api{
     .then(showErrorMessage)
     .then((res) => {
       handleDisLikeCard(res)
-    })
-    .catch((err) => {
-      console.log(err);
     })
   }
 
@@ -131,8 +110,5 @@ export default class Api{
       })
     })
     .then(showErrorMessage)
-    .catch((err) => {
-      console.log(err);
-    })
   }
 }

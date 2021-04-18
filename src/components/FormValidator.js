@@ -65,7 +65,7 @@ export class FormValidator{
   toggleButtonState(){
     const notValidElement = this._inputList.some((inputElement) => !inputElement.validity.valid);
     if(notValidElement){
-      this._buttonElement.setAttribute('disabled', true);
+      this._buttonElement.setAttribute('disabled', 'disabled');
       this._buttonElement.classList.add(this._inactiveBtn);
     } else {
       this._buttonElement.removeAttribute('disabled');
