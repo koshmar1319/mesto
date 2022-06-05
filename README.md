@@ -36,5 +36,4 @@ npm run dev
 npm run build
 ```
 ### Демо:
-> Github Pages
-[Ссылка на сайт :arrow_lower_right:](https://koshmar1319.github.io/mesto/index.html "ссылка на сайт")
+> Github Pages <br/>[Ссылка на сайт :arrow_lower_right:](https://koshmar1319.github.io/mesto/index.html "ссылка на сайт")
