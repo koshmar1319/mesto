@@ -1,6 +1,6 @@
 # Проект Mesto
 
-<kbd> <img width="900" align="center" alt="Превью проекта" src="./view_mesto.jpg"> </kbd>
+<kbd> <img width="900" height="auto" align="center" alt="Превью проекта" src="./view_mesto.jpg"> </kbd>
 
 ### Описание:
 Интерактивная страница, где можно редактировать профиль, добавлять фотографии, удалять их и ставить лайки.
