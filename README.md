@@ -4,6 +4,8 @@
 
 ### Описание:
 Интерактивная страница, где можно редактировать профиль, добавлять фотографии, удалять их и ставить лайки.
+[Макет проекта в Figma](https://www.figma.com/file/xfLxdR6oHfEAaSgrzIJARe/JavaScript.-Sprint-4?node-id=0%3A1 "ссылка на макет")
+
 ### Стек технологий:
 
 | HTML <code><img  height="20"  src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"></code> | CSS <code><img  height="20"  src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"></code> | JavaScript <code><img  height="20"  src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code>|
